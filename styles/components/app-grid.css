@@ -3,3 +3,7 @@
   grid-template-rows: 48px auto 48px;
   height: 100vh;
 }
+
+.app-grid__main {
+  margin-bottom: 15px;
+}
