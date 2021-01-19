@@ -1,0 +1,10 @@
+.nav {
+  display: flex;
+  justify-content: space-around;
+  font-size: 2em;
+  background: var(--navcolor);
+}
+
+.nav i {
+  color: #344055;
+}
