@@ -6,4 +6,5 @@
 
 .app-grid__main {
   margin-bottom: 15px;
+  overflow: auto;
 }

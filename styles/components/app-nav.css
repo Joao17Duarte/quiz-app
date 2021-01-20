@@ -1,10 +1,17 @@
 .nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   font-size: 2em;
   background: var(--navcolor);
 }
 
 .nav i {
   color: #344055;
+}
+
+.app-grid__link {
+  display: inline-block;
+  align-items: center;
+  border: 2px groove rgba(52, 64, 85, 0.1);
+  padding: 0 15px;
 }
