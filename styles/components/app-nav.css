@@ -6,6 +6,7 @@
 }
 
 .nav i {
+  align-items: center;
   color: #344055;
 }
 
@@ -14,4 +15,9 @@
   align-items: center;
   border: 2px groove rgba(52, 64, 85, 0.1);
   padding: 0 15px;
+}
+
+.app-grid__link span {
+  display: grid;
+  font-size: 15px;
 }
