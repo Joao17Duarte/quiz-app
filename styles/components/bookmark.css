@@ -1,0 +1,11 @@
+.bookmark i {
+  color: #344055;
+}
+
+.bookmark {
+  font-size: 36px;
+  color: #344055;
+  position: absolute;
+  top: -10px;
+  right: 20px;
+}
