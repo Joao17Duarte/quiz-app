@@ -10,7 +10,7 @@
   color: #344055;
 }
 
-.app-grid__link {
+.nav__link {
   display: inline-block;
   align-items: center;
   border: 2px groove rgba(52, 64, 85, 0.1);
