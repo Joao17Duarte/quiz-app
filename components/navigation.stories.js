@@ -1,5 +1,3 @@
-import '../styles/index.css'
-
 import './app-nav.css'
 import navigation from './navigation.html'
 

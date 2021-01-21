@@ -1,6 +1,8 @@
 @import '_base.css';
-@import 'components/app-grid.css';
-@import 'components/app-nav.css';
-@import 'components/variables.css';
-@import 'components/app-card.css';
-@import 'components/bookmark.css';
+@import 'variables.css';
+@import '../components/app-grid.css';
+@import '../components/app-nav.css';
+@import '../components/app-card.css';
+@import '../components/bookmark.css';
+
+@import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
