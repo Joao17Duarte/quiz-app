@@ -1,13 +1,8 @@
-.bookmark i {
-  color: #344055;
-  opacity: 0.7;
-}
-
 .bookmark {
   font-size: 36px;
-  color: #344055;
+  color: var(--color-darkblue);
   position: absolute;
-  top: -10px;
+  top: -5px;
   right: 20px;
-  background: lightgray;
+  background: #abdae1;
 }

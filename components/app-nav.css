@@ -1,18 +1,19 @@
-.nav {
+.navigation {
   display: flex;
-  justify-content: space-evenly;
-  font-size: 2em;
-  background: var(--navcolor);
+  justify-content: space-between;
+  align-content: center;
+  background-color: var(--color-white);
+  padding: 12px 29px;
+  border-radius: 10px;
+  box-shadow: 0 2px 11px var(--shadow-grey);
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
 }
 
-.nav i {
-  align-items: center;
+.navigation a {
+  text-decoration: none;
+  line-height: 0;
   color: #344055;
-}
-
-.nav__link {
-  display: inline-block;
-  align-items: center;
-  border: 2px groove rgba(52, 64, 85, 0.1);
-  padding: 0 15px;
 }

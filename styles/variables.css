@@ -1,4 +1,7 @@
 :root {
-  --bgcolor: #fffcff;
-  --navcolor: #247ba0;
+  --color-darkblue: #193251;
+  --color-gray: #e0e4e8;
+  --color-white: #fff;
+  --shadow-grey: rgba(25, 50, 81, 0.2);
+  --font-size-big: 16px;
 }

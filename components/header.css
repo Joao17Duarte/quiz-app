@@ -1,0 +1,14 @@
+.header {
+  position: fixed;
+  width: 100vw;
+  background-color: var(--color-darkblue);
+  z-index: 1;
+  color: var(--color-gray);
+}
+
+.header__title {
+  text-transform: uppercase;
+  font-size: var(--font-size-big);
+  line-height: 1.5;
+  text-align: center;
+}

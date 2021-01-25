@@ -3,21 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz App</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>QuizGenerator</title>
   </head>
-  <body class="app-grid">
-    <header>
-      <h1>Bookmark</h1>
+  <body>
+    <header class="header">
+      <h1 class="header__title">bookmarkcopy</h1>
     </header>
+
     <main class="app-grid__main">
-      <section class="card">
+      <section class="card margin-t30">
         <h2>Question 1</h2>
         <i role="button" class="bookmark fa fa-bookmark"></i>
 
@@ -50,20 +45,52 @@
         <button>answer 3</button>
         <button>answer 4</button>
       </section>
-    </main>
-    <footer class="app-grid__footer">
-      <nav class="nav">
-        <a class="nav__link" href="index.html"><i class="fas fa-home"></i></a>
+      <section class="card">
+        <h2>Question 2</h2>
+        <i role="button" class="bookmark fa fa-bookmark"></i>
 
-        <a class="app-grid__link" href="bookmark.html"
-          ><i class="fas fa-bookmark"></i
+        <h3>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, quia.
+        </h3>
+        <details>
+          <summary>show answer</summary>
+          <p>answer</p>
+        </details>
+        <button>answer 1</button>
+        <button>answer 2</button>
+        <button>answer 3</button>
+        <button>answer 4</button>
+      </section>
+      <section class="card">
+        <h2>Question 2</h2>
+        <i role="button" class="bookmark fa fa-bookmark"></i>
+
+        <h3>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, quia.
+        </h3>
+        <details>
+          <summary>show answer</summary>
+          <p>answer</p>
+        </details>
+        <button>answer 1</button>
+        <button>answer 2</button>
+        <button>answer 3</button>
+        <button>answer 4</button>
+      </section>
+    </main>
+
+    <footer>
+      <nav class="navigation">
+        <a href="/index.html"
+          ><i class="fas fa-home" width="auto" height="20"></i
         ></a>
-        <a class="app-grid__link" href="create"
-          ><i class="fas fa-plus-square"></i
+        <a href="/bookmark.html"
+          ><i class="fas fa-bookmark" width="auto" height="20"></i
         ></a>
-        <a class="app-grid__link" href="settings"
-          ><i class="fas fa-cogs"></i
+        <a href="/create.html"
+          ><i class="fas fa-pen" width="auto" height="20"></i
         ></a>
+        <a href="/#"><i class="fas fa-cogs" width="auto" height="20"></i></a>
       </nav>
     </footer>
   </body>
