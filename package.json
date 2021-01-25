@@ -10,7 +10,7 @@
     "build-storybook": "build-storybook"
   },
   "keywords": [],
-  "author": "Jeremias Erbs <jerry@badabam.de> (https://badabam.de)",
+  "author": "Joao Duarte",
   "license": "ISC",
   "main": "index.js",
   "repository": {
