@@ -12,8 +12,8 @@
   right: 20px;
 }
 
-.navigation a {
+.navigation spam {
   text-decoration: none;
   line-height: 0;
-  color: #344055;
+  color: var(--color-lightblue);
 }
