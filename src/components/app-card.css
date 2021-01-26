@@ -21,3 +21,9 @@
 .card:last-child {
   margin-bottom: 75px;
 }
+
+.btn-answer {
+  border-radius: 5px;
+  border-color: #3e898988;
+  background: #3e898966;
+}
