@@ -6,6 +6,8 @@ const navHome = document.querySelector('[data-js=btnHome]')
 const navBook = document.querySelector('[data-js=btnBook]')
 const navCreate = document.querySelector('[data-js=btnCreate]')
 
+const header = document.querySelector('h1')
+
 navHome.addEventListener('click', () => {
   home.classList.remove('hidden')
   bookmark.classList.add('hidden')
@@ -14,6 +16,8 @@ navHome.addEventListener('click', () => {
   navHome.classList.add('active')
   navBook.classList.remove('active')
   navCreate.classList.remove('active')
+
+  header.textContent = 'Wer das liest ist doof'
 })
 
 navBook.addEventListener('click', () => {
