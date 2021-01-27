@@ -1,12 +1,11 @@
 const home = document.querySelector('[data-js=section-index]')
 const bookmark = document.querySelector('[data-js=section-book]')
 const form = document.querySelector('[data-js=section-form]')
+const header = document.querySelector('h1')
 
 const navHome = document.querySelector('[data-js=btnHome]')
 const navBook = document.querySelector('[data-js=btnBook]')
 const navCreate = document.querySelector('[data-js=btnCreate]')
-
-const header = document.querySelector('h1')
 
 navHome.addEventListener('click', () => {
   home.classList.remove('hidden')
@@ -17,7 +16,7 @@ navHome.addEventListener('click', () => {
   navBook.classList.remove('active')
   navCreate.classList.remove('active')
 
-  header.textContent = 'Wer das liest ist doof'
+  header.textContent = 'QuizGenerator'
 })
 
 navBook.addEventListener('click', () => {
@@ -28,6 +27,7 @@ navBook.addEventListener('click', () => {
   navHome.classList.remove('active')
   navBook.classList.add('active')
   navCreate.classList.remove('active')
+  header.textContent = 'Bookmark'
 })
 
 navCreate.addEventListener('click', () => {
@@ -38,6 +38,7 @@ navCreate.addEventListener('click', () => {
   navHome.classList.remove('active')
   navBook.classList.remove('active')
   navCreate.classList.add('active')
+  header.textContent = 'Create your Question'
 })
 
 /*
