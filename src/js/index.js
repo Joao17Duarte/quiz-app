@@ -1,11 +1,16 @@
+//sections html
+
 const home = document.querySelector('[data-js=section-index]')
 const bookmark = document.querySelector('[data-js=section-book]')
 const form = document.querySelector('[data-js=section-form]')
 const header = document.querySelector('h1')
 
+//navigation buttons
 const navHome = document.querySelector('[data-js=btnHome]')
 const navBook = document.querySelector('[data-js=btnBook]')
 const navCreate = document.querySelector('[data-js=btnCreate]')
+
+const bookIcon = document.querySelector('[data-js=book-icon]')
 
 navHome.addEventListener('click', () => {
   home.classList.remove('hidden')
@@ -41,12 +46,9 @@ navCreate.addEventListener('click', () => {
   header.textContent = 'Create your Question'
 })
 
-/*
-
-
-
-
-*/
+bookIcon.addEventListener('click', () => {
+  bookIcon.classList.toggle('fa')
+})
 
 //section 16 index
 //section 65 bookmark
