@@ -15,7 +15,8 @@ const navCreate = getElement('btnCreate')
 
 //form items
 const formEl = getElement('form')
-const questionInput = getElement('questionInput')
+const labels = document.querySelectorAll('[data-js="labelForm"]')
+const formInput = getElement('formInput')
 
 navHome.addEventListener('click', () => {
   home.classList.remove('hidden')
@@ -50,43 +51,17 @@ navCreate.addEventListener('click', () => {
   navCreate.classList.add('active')
 })
 
-//section 16 index
-//section 65 bookmark
-//section 148 form
+formEl.addEventListener('submit', event => {
+  event.preventDefault()
+  formEl.reset()
+  formInput.focus()
+})
 
 bookmarkIcons.forEach(icon => {
   icon.addEventListener('click', () => {
     icon.classList.toggle('fa')
   })
 })
-
-formEl.addEventListener('submit', event => {
-  event.preventDefault()
-  formEl.reset()
-  questionInput.focus()
-})
-
-function getElement(dataJsName) {
-  return document.querySelector(`[data-js="${dataJsName}"]`)
-}
-
-// const counter = document.querySelectorAll('[data-js="counter"]')
-
-// labelCounter.forEach(label => {
-//   const questionInput = getElement('questionInput')
-//   const labelCounter = document.querySelectorAll('[data-js="labelCounter"]')
-
-//   labelCounter.addEventListener('input', event => {
-//     questionInput
-//     counter.textContent = `${event.currentTarget.value.length}/300`
-//   })
-// })
-
-/*
-
-
-*/
-const labels = document.querySelectorAll('[data-js="labelForm"]')
 
 labels.forEach(label => {
   const inputBox = label.querySelector('[data-js="formInput"]')
@@ -95,3 +70,7 @@ labels.forEach(label => {
     counter.textContent = `${event.currentTarget.value.length}/100`
   })
 })
+
+function getElement(dataJsName) {
+  return document.querySelector(`[data-js="${dataJsName}"]`)
+}
