@@ -18,6 +18,11 @@ h3 {
   text-align: center;
 }
 
+h2,
+h3 {
+  color: var(--color-darkblue);
+}
+
 input,
 button {
   font-size: 1em;

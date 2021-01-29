@@ -1,16 +1,23 @@
 //sections html
 
-const home = document.querySelector('[data-js=section-index]')
-const bookmark = document.querySelector('[data-js=section-book]')
-const form = document.querySelector('[data-js=section-form]')
+const home = getElement('section-index')
+const bookmark = getElement('section-book')
+const form = getElement('section-form')
 const header = document.querySelector('h1')
 
+// bookmark icon selector
 const bookmarkIcons = document.querySelectorAll('[data-js="bookmarkIcon"]')
 
 //navigation buttons
-const navHome = document.querySelector('[data-js=btnHome]')
-const navBook = document.querySelector('[data-js=btnBook]')
-const navCreate = document.querySelector('[data-js=btnCreate]')
+const navHome = getElement('btnHome')
+const navBook = getElement('btnBook')
+const navCreate = getElement('btnCreate')
+
+//form items
+const formEl = getElement('form')
+const questionInput = getElement('questionInput')
+// const rightAnswerInput = getElement('rightAnswer')
+// const answerOptionInput = document.querySelectorAll('[data-js="answerOption"]')
 
 navHome.addEventListener('click', () => {
   home.classList.remove('hidden')
@@ -55,19 +62,38 @@ bookmarkIcons.forEach(icon => {
   })
 })
 
+formEl.addEventListener('submit', event => {
+  event.preventDefault()
+  formEl.reset()
+  questionInput.focus()
+})
+
+function getElement(dataJsName) {
+  return document.querySelector(`[data-js="${dataJsName}"]`)
+}
+
+// const counter = document.querySelectorAll('[data-js="counter"]')
+
+// labelCounter.forEach(label => {
+//   const questionInput = getElement('questionInput')
+//   const labelCounter = document.querySelectorAll('[data-js="labelCounter"]')
+
+//   labelCounter.addEventListener('input', event => {
+//     questionInput
+//     counter.textContent = `${event.currentTarget.value.length}/300`
+//   })
+// })
+
 /*
 
 
+*/
+const labels = document.querySelectorAll('[data-js="label"]')
 
-const cards = document.querySelectorAll('[data-js="card"]')
-
-cards.forEach(card => {
-  const button = card.querySelector('[data-js="button"]')
-  const answer = card.querySelector('[data-js="answer"]')
-  
-  button.addEventListener('click', () => {
-    answer.classList.toggle('hidden')
+labels.forEach(label => {
+  const inputBox = label.querySelector('[data-js="questionInput"]')
+  const counter = label.querySelector('[data-js="counter"]')
+  inputBox.addEventListener('input', event => {
+    counter.textContent = `${event.currentTarget.value.length}/100`
   })
 })
-
-*/
