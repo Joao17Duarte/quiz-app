@@ -98,6 +98,9 @@
       </section>
 
       <!--section index end -->
+
+      <!--section bookmark start-->
+
       <section data-js="section-book" class="hidden">
         <section class="card margin-t30">
           <h2>Question 1</h2>
@@ -168,21 +171,68 @@
 
       <!--section bookmark end-->
 
-      <section data-js="section-form" class="app-grid_main hidden">
-        <form class="form-grid card">
-          <label for="question">Write your Question here</label>
-          <input type="text" id="question" name="question" />
-          <label for="rightanswer">Your Right Answer</label>
-          <input type="text" id="rightanswer" name="rightanswer" />
+      <!--section form start-->
 
-          <label for="option">Your Option Answer</label>
-          <input type="text" id="option" name="option" />
-          <input type="text" id="option" name="option" />
-          <input type="text" id="option" name="option" />
-          <input type="text" id="option" name="option" />
+      <section data-js="section-form" class="app-grid_main hidden">
+        <form data-js="form" class="form-grid card">
+          <label data-js="label" for="question"
+            >Write your Question here
+            <input
+              maxlength="250"
+              data-js="questionInput"
+              type="text"
+              name="question"
+            />
+            <span data-js="counter"></span>
+          </label>
+
+          <label data-js="label" for="rightanswer"
+            >Your Right Answer
+            <input
+              maxlength="50"
+              data-js="questionInput"
+              type="text"
+              name="rightanswer"
+            />
+            <span data-js="counter"></span>
+          </label>
+
+          <label data-js="label" for="option"
+            >Your Option Answer
+            <input
+              maxlength="50"
+              data-js="questionInput"
+              type="text"
+              name="option"
+            />
+            <span data-js="counter"></span>
+            <input
+              maxlength="50"
+              data-js="questionInput"
+              type="text"
+              name="option"
+            />
+            <span data-js="counter"></span>
+            <input
+              maxlength="50"
+              data-js="questionInput"
+              type="text"
+              name="option"
+            />
+            <span data-js="counter"></span>
+            <input
+              maxlength="50"
+              data-js="questionInput"
+              type="text"
+              name="option"
+            />
+            <span data-js="counter"></span>
+          </label>
           <div>
-            <a class="btn-form" href="">Save Question</a>
-            <a class="btn-form" href="">Cancel</a>
+            <div>
+              <button class="btn-form">Cancel</button>
+              <button class="btn-form">Save Question</button>
+            </div>
           </div>
         </form>
       </section>

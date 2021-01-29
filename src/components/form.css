@@ -12,12 +12,10 @@
 }
 
 .btn-form {
-  display: flex;
-  justify-content: space-around;
-  text-decoration: none;
+  margin: 10px;
+  padding: 5px 2px;
   color: var(--color-white);
   background: var(--color-darkblue);
   border-radius: 5px;
-  margin: 10px;
-  padding: 5px 0;
+  border-color: var(--color-darkblue);
 }
