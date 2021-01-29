@@ -13,7 +13,7 @@
     </header>
 
     <main class="app-grid__main">
-      <section data-js="section-index" class="">
+      <section data-js="section-home" class="">
         <section class="card margin-t30">
           <h2>Question 1</h2>
           <i
@@ -101,7 +101,7 @@
 
       <!--section bookmark start-->
 
-      <section data-js="section-book" class="hidden">
+      <section data-js="section-bookmark" class="hidden">
         <section class="card margin-t30">
           <h2>Question 1</h2>
           <i role="button" class="bookmark fa fa-bookmark"></i>
@@ -173,56 +173,65 @@
 
       <!--section form start-->
 
-      <section data-js="section-form" class="app-grid_main hidden">
+      <section data-js="section-create" class="app-grid_main hidden">
         <form data-js="form" class="form-grid card">
-          <label data-js="label" for="question"
+          <label data-js="labelForm" for="question"
             >Write your Question here
             <input
-              maxlength="250"
-              data-js="questionInput"
+              id="question"
+              maxlength="100"
+              data-js="formInput"
               type="text"
               name="question"
             />
             <span data-js="counter"></span>
           </label>
 
-          <label data-js="label" for="rightanswer"
+          <label data-js="labelForm" for="rightanswer"
             >Your Right Answer
             <input
-              maxlength="50"
-              data-js="questionInput"
+              id="rightanswer"
+              maxlength="100"
+              data-js="formInput"
               type="text"
               name="rightanswer"
             />
             <span data-js="counter"></span>
           </label>
 
-          <label data-js="label" for="option"
+          <label data-js="labelForm" for="option"
             >Your Option Answer
             <input
-              maxlength="50"
-              data-js="questionInput"
+              id="option"
+              maxlength="100"
+              data-js="formInput"
               type="text"
               name="option"
             />
             <span data-js="counter"></span>
+          </label>
+          <label data-js="labelForm" for="option">
             <input
-              maxlength="50"
-              data-js="questionInput"
+              maxlength="100"
+              data-js="formInput"
               type="text"
               name="option"
             />
             <span data-js="counter"></span>
+          </label>
+          <label data-js="labelForm" for="option">
             <input
-              maxlength="50"
-              data-js="questionInput"
+              maxlength="100"
+              data-js="formInput"
               type="text"
               name="option"
             />
             <span data-js="counter"></span>
+          </label>
+          <label data-js="labelForm" for="option">
             <input
-              maxlength="50"
-              data-js="questionInput"
+              maxlength="100"
+              data-js="formInput"
               type="text"
               name="option"
             />

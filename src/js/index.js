@@ -1,8 +1,8 @@
 //sections html
 
-const home = getElement('section-index')
-const bookmark = getElement('section-book')
-const form = getElement('section-form')
+const home = getElement('section-home')
+const bookmark = getElement('section-bookmark')
+const form = getElement('section-create')
 const header = document.querySelector('h1')
 
 // bookmark icon selector
@@ -16,8 +16,6 @@ const navCreate = getElement('btnCreate')
 //form items
 const formEl = getElement('form')
 const questionInput = getElement('questionInput')
-// const rightAnswerInput = getElement('rightAnswer')
-// const answerOptionInput = document.querySelectorAll('[data-js="answerOption"]')
 
 navHome.addEventListener('click', () => {
   home.classList.remove('hidden')
@@ -88,10 +86,10 @@ function getElement(dataJsName) {
 
 
 */
-const labels = document.querySelectorAll('[data-js="label"]')
+const labels = document.querySelectorAll('[data-js="labelForm"]')
 
 labels.forEach(label => {
-  const inputBox = label.querySelector('[data-js="questionInput"]')
+  const inputBox = label.querySelector('[data-js="formInput"]')
   const counter = label.querySelector('[data-js="counter"]')
   inputBox.addEventListener('input', event => {
     counter.textContent = `${event.currentTarget.value.length}/100`
