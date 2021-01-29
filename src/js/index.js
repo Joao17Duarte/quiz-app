@@ -5,7 +5,7 @@ const bookmark = document.querySelector('[data-js=section-book]')
 const form = document.querySelector('[data-js=section-form]')
 const header = document.querySelector('h1')
 
-const bookmarkIcon = document.querySelectorAll('[data-js="bookmark-icon"]')
+const bookmarkIcons = document.querySelectorAll('[data-js="bookmarkIcon"]')
 
 //navigation buttons
 const navHome = document.querySelector('[data-js=btnHome]')
@@ -49,11 +49,9 @@ navCreate.addEventListener('click', () => {
 //section 65 bookmark
 //section 148 form
 
-bookmarkIcon.forEach(icon => {
-  const bookIcon = icon.querySelector('[data-js="bookmarkIcon"]')
-
-  bookIcon.addEventListener('click', () => {
-    bookIcon.classList.toggle('')
+bookmarkIcons.forEach(icon => {
+  icon.addEventListener('click', () => {
+    icon.classList.toggle('fa')
   })
 })
 
