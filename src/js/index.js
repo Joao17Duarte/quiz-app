@@ -11,6 +11,7 @@ const home = getElement('section-home'),
   counters = document.querySelectorAll('[data-js="counter"]'),
   formInput = getElement('formInput')
 
+
 navHome.addEventListener('click', () => {
   home.classList.remove('hidden')
   bookmark.classList.add('hidden')
@@ -78,3 +79,6 @@ cards.forEach(card => {
     answer.classList.toggle('hidden')
   })
 })
+
+
+
