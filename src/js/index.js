@@ -1,22 +1,15 @@
-//sections html
-
-const home = getElement('section-home')
-const bookmark = getElement('section-bookmark')
-const form = getElement('section-create')
-const header = document.querySelector('h1')
-
-// bookmark icon selector
-const bookmarkIcons = document.querySelectorAll('[data-js="bookmarkIcon"]')
-
-//navigation buttons
-const navHome = getElement('btnHome')
-const navBook = getElement('btnBook')
-const navCreate = getElement('btnCreate')
-
-//form items
-const formEl = getElement('form')
-const labels = document.querySelectorAll('[data-js="labelForm"]')
-const formInput = getElement('formInput')
+const home = getElement('section-home'),
+  bookmark = getElement('section-bookmark'),
+  form = getElement('section-create'),
+  header = document.querySelector('h1'),
+  bookmarkIcons = document.querySelectorAll('[data-js="bookmarkIcon"]'),
+  navHome = getElement('btnHome'),
+  navBook = getElement('btnBook'),
+  navCreate = getElement('btnCreate'),
+  formEl = getElement('form'),
+  labels = document.querySelectorAll('[data-js="labelForm"]'),
+  counters = document.querySelectorAll('[data-js="counter"]'),
+  formInput = getElement('formInput')
 
 navHome.addEventListener('click', () => {
   home.classList.remove('hidden')
@@ -74,3 +67,14 @@ labels.forEach(label => {
 function getElement(dataJsName) {
   return document.querySelector(`[data-js="${dataJsName}"]`)
 }
+
+const cards = document.querySelectorAll('[data-js="card"]')
+
+cards.forEach(card => {
+  const buttonAnswer = card.querySelector('[data-js="buttonAnswer"]')
+  console.log('buttonAnswer ', buttonAnswer)
+  const answer = card.querySelector('[data-js="hiddenAnswer"]')
+  buttonAnswer.addEventListener('click', () => {
+    answer.classList.toggle('hidden')
+  })
+})
