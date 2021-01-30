@@ -11,7 +11,12 @@ const home = getElement('section-home'),
   formEl = getElement('form'),
   labels = document.querySelectorAll('[data-js="labelForm"]'),
   counters = document.querySelectorAll('[data-js="counter"]'),
-  formInput = getElement('formInput')
+  formInput = getElement('formInput'),
+  darkmodeButton = getElement('darkmode'),
+  buttons = document.querySelectorAll('.btn-showAnswer'),
+  answerButtons = document.querySelectorAll('.btn-answer')
+
+console.log(buttons)
 
 navHome.addEventListener('click', () => {
   home.classList.remove('hidden')
@@ -98,4 +103,11 @@ cards.forEach(card => {
   buttonAnswer.addEventListener('click', () => {
     answer.classList.toggle('hidden')
   })
+})
+
+darkmodeButton.addEventListener('click', () => {
+  buttons.forEach(button => button.classList.toggle('btn-darkmode'))
+  answerButtons.forEach(answerButton =>
+    answerButton.classList.toggle('btn-darkmode')
+  )
 })
