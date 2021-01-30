@@ -115,7 +115,6 @@
 
       <section data-js="section-bookmark" class="hidden">
         <section data-js="card" class="card margin-t30">
-
           <h2>Question 1</h2>
           <i role="button" class="bookmark fa fa-bookmark"></i>
 
@@ -201,10 +200,9 @@
 
       <section data-js="section-create" class="app-grid_main hidden">
         <form data-js="form" class="form-grid card">
-          <label data-js="labelForm" for="question"
+          <label data-js="labelForm"
             >Write your Question here
             <input
-              id="question"
               maxlength="100"
               data-js="formInput"
               type="text"
@@ -213,10 +211,9 @@
             <span data-js="counter"></span>
           </label>
 
-          <label data-js="labelForm" for="rightanswer"
+          <label data-js="labelForm"
             >Your Right Answer
             <input
-              id="rightanswer"
               maxlength="100"
               data-js="formInput"
               type="text"
@@ -225,10 +222,9 @@
             <span data-js="counter"></span>
           </label>
 
-          <label data-js="labelForm" for="option"
+          <label data-js="labelForm"
             >Your Option Answer
             <input
-              id="option"
               maxlength="100"
               data-js="formInput"
               type="text"
@@ -236,7 +232,7 @@
             />
             <span data-js="counter"></span>
           </label>
-          <label data-js="labelForm" for="option">
+          <label data-js="labelForm">
             <input
               maxlength="100"
               data-js="formInput"
@@ -245,7 +241,7 @@
             />
             <span data-js="counter"></span>
           </label>
-          <label data-js="labelForm" for="option">
+          <label data-js="labelForm">
             <input
               maxlength="100"
               data-js="formInput"
@@ -254,7 +250,7 @@
             />
             <span data-js="counter"></span>
           </label>
-          <label data-js="labelForm" for="option">
+          <label data-js="labelForm">
             <input
               maxlength="100"
               data-js="formInput"
@@ -270,6 +266,9 @@
             </div>
           </div>
         </form>
+      </section>
+      <section data-js="section-settings" class="app-grid_main hidden">
+        <button>Dark-Mode</button>
       </section>
     </main>
 
@@ -287,7 +286,7 @@
           <i class="fas fa-pen" width="auto" height="20"></i>
         </span>
 
-        <span>
+        <span data-js="btnSettings">
           <i class="fas fa-cogs" width="auto" height="20"></i>
         </span>
       </nav>

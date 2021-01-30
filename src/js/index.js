@@ -1,48 +1,69 @@
 const home = getElement('section-home'),
   bookmark = getElement('section-bookmark'),
   form = getElement('section-create'),
-  header = document.querySelector('h1'),
-  bookmarkIcons = document.querySelectorAll('[data-js="bookmarkIcon"]'),
+  settings = getElement('section-settings'),
   navHome = getElement('btnHome'),
   navBook = getElement('btnBook'),
   navCreate = getElement('btnCreate'),
+  navSetting = getElement('btnSettings'),
+  header = document.querySelector('h1'),
+  bookmarkIcons = document.querySelectorAll('[data-js="bookmarkIcon"]'),
   formEl = getElement('form'),
   labels = document.querySelectorAll('[data-js="labelForm"]'),
   counters = document.querySelectorAll('[data-js="counter"]'),
   formInput = getElement('formInput')
 
-
 navHome.addEventListener('click', () => {
   home.classList.remove('hidden')
   bookmark.classList.add('hidden')
   form.classList.add('hidden')
+  settings.classList.add('hidden')
+
   header.textContent = 'QuizGenerator'
 
   navHome.classList.add('active')
   navBook.classList.remove('active')
   navCreate.classList.remove('active')
+  navSetting.classList.remove('active')
 })
 
 navBook.addEventListener('click', () => {
   home.classList.add('hidden')
   bookmark.classList.remove('hidden')
   form.classList.add('hidden')
+  settings.classList.add('hidden')
   header.textContent = 'Bookmark'
 
   navHome.classList.remove('active')
   navBook.classList.add('active')
   navCreate.classList.remove('active')
+  navSetting.classList.remove('active')
 })
 
 navCreate.addEventListener('click', () => {
   home.classList.add('hidden')
   bookmark.classList.add('hidden')
   form.classList.remove('hidden')
+  settings.classList.add('hidden')
   header.textContent = 'Create your Question'
 
   navHome.classList.remove('active')
   navBook.classList.remove('active')
   navCreate.classList.add('active')
+  navSetting.classList.remove('active')
+})
+
+navSetting.addEventListener('click', () => {
+  home.classList.add('hidden')
+  bookmark.classList.add('hidden')
+  form.classList.add('hidden')
+  settings.classList.remove('hidden')
+  header.textContent = 'Settings'
+
+  navHome.classList.remove('active')
+  navBook.classList.remove('active')
+  navCreate.classList.remove('active')
+  navSetting.classList.add('active')
 })
 
 formEl.addEventListener('submit', event => {
@@ -79,6 +100,3 @@ cards.forEach(card => {
     answer.classList.toggle('hidden')
   })
 })
-
-
-
