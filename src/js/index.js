@@ -94,7 +94,6 @@ const cards = document.querySelectorAll('[data-js="card"]')
 
 cards.forEach(card => {
   const buttonAnswer = card.querySelector('[data-js="buttonAnswer"]')
-  console.log('buttonAnswer ', buttonAnswer)
   const answer = card.querySelector('[data-js="hiddenAnswer"]')
   buttonAnswer.addEventListener('click', () => {
     answer.classList.toggle('hidden')
