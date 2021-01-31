@@ -1,4 +1,3 @@
-//section html section
 const home = getElement('section-home'),
   bookmark = getElement('section-bookmark'),
   form = getElement('section-create'),
@@ -6,26 +5,22 @@ const home = getElement('section-home'),
   body = document.querySelector('[data-js="body"]'),
   title = document.querySelector('h1'),
   header = document.querySelector('header'),
-  //section navbar buttons
   navHome = getElement('btnHome'),
   navBook = getElement('btnBook'),
   navCreate = getElement('btnCreate'),
   navSetting = getElement('btnSettings'),
   navBar = document.querySelector('.navigation'),
   navButtons = document.querySelectorAll('.fas'),
-  //section form
   formEl = getElement('form'),
   formInput = getElement('formInput'),
   labels = document.querySelectorAll('[data-js="labelForm"]'),
   counters = document.querySelectorAll('[data-js="counter"]'),
   buttonSubmit = document.querySelectorAll('.btn-form'),
-  //section cards
   cards = document.querySelectorAll('[data-js="card"]'),
   buttons = document.querySelectorAll('.btn-showAnswer'),
   answerButtons = document.querySelectorAll('.btn-answer'),
   bookmarkIcons = document.querySelectorAll('[data-js="bookmarkIcon"]'),
   checkedBookmark = document.querySelectorAll('.bookmark'),
-  //section darkmode
   darkmodeButton = getElement('darkmode')
 
 navHome.addEventListener('click', () => {
