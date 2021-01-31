@@ -23,8 +23,29 @@
   margin-bottom: 75px;
 }
 
+.btn-showAnswer {
+  padding: 10px;
+  margin: auto;
+  width: 50%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border-color: #3e898988;
+  background: #3e898966;
+}
+
+.paragraph {
+  margin-top: 0;
+}
+
 .btn-answer {
   border-radius: 5px;
   border-color: #3e898988;
   background: #3e898966;
+  width: 50%;
+  height: 35px;
+  margin: 4px;
+}
+
+.btn-grid {
+  display: flex;
 }

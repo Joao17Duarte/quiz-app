@@ -7,8 +7,8 @@
     <title>QuizGenerator</title>
     <script defer type="module" src="./js/index.js"></script>
   </head>
-  <body>
-    <header class="header">
+  <body data-js="body">
+    <header data-js="header" class="header">
       <h1 class="header__title">QuizGenerator</h1>
     </header>
 
@@ -26,16 +26,21 @@
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, quia.
           </h3>
 
-          <button data-js="buttonAnswer">show answer</button>
-          <p data-js="hiddenAnswer" class="hidden">
+          <button class="btn-showAnswer" data-js="buttonAnswer">
+            show answer
+          </button>
+          <p data-js="hiddenAnswer" class="paragraph hidden">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores,
             iure!
           </p>
-
-          <button class="btn-answer">answer 1</button>
-          <button class="btn-answer">answer 2</button>
-          <button class="btn-answer">answer 3</button>
-          <button class="btn-answer">answer 4</button>
+          <div class="btn-grid">
+            <button class="btn-answer">answer 1</button>
+            <button class="btn-answer">answer 2</button>
+          </div>
+          <div class="btn-grid">
+            <button class="btn-answer">answer 3</button>
+            <button class="btn-answer">answer 4</button>
+          </div>
         </section>
 
         <section data-js="card" class="card">
@@ -50,16 +55,21 @@
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, quia.
           </h3>
 
-          <button data-js="buttonAnswer">show answer</button>
-          <p data-js="hiddenAnswer" class="hidden">
+          <button class="btn-showAnswer" data-js="buttonAnswer">
+            show answer
+          </button>
+          <p data-js="hiddenAnswer" class="paragraph hidden">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores,
             iure!
           </p>
-
-          <button class="btn-answer">answer 1</button>
-          <button class="btn-answer">answer 2</button>
-          <button class="btn-answer">answer 3</button>
-          <button class="btn-answer">answer 4</button>
+          <div class="btn-grid">
+            <button class="btn-answer">answer 1</button>
+            <button class="btn-answer">answer 2</button>
+          </div>
+          <div class="btn-grid">
+            <button class="btn-answer">answer 3</button>
+            <button class="btn-answer">answer 4</button>
+          </div>
         </section>
         <section data-js="card" class="card">
           <h2>Question 3</h2>
@@ -73,16 +83,21 @@
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, quia.
           </h3>
 
-          <button data-js="buttonAnswer">show answer</button>
-          <p data-js="hiddenAnswer" class="hidden">
+          <button class="btn-showAnswer" data-js="buttonAnswer">
+            show answer
+          </button>
+          <p data-js="hiddenAnswer" class="paragraph hidden">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores,
             iure!
           </p>
-
-          <button class="btn-answer">answer 1</button>
-          <button class="btn-answer">answer 2</button>
-          <button class="btn-answer">answer 3</button>
-          <button class="btn-answer">answer 4</button>
+          <div class="btn-grid">
+            <button class="btn-answer">answer 1</button>
+            <button class="btn-answer">answer 2</button>
+          </div>
+          <div class="btn-grid">
+            <button class="btn-answer">answer 3</button>
+            <button class="btn-answer">answer 4</button>
+          </div>
         </section>
         <section data-js="card" class="card">
           <h2>Question 4</h2>
@@ -96,44 +111,25 @@
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, quia.
           </h3>
 
-          <button data-js="buttonAnswer">show answer</button>
-          <p data-js="hiddenAnswer" class="hidden">
+          <button class="btn-showAnswer" data-js="buttonAnswer">
+            show answer
+          </button>
+          <p data-js="hiddenAnswer" class="paragraph hidden">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores,
             iure!
           </p>
-
-          <button class="btn-answer">answer 1</button>
-          <button class="btn-answer">answer 2</button>
-          <button class="btn-answer">answer 3</button>
-          <button class="btn-answer">answer 4</button>
+          <div class="btn-grid">
+            <button class="btn-answer">answer 1</button>
+            <button class="btn-answer">answer 2</button>
+          </div>
+          <div class="btn-grid">
+            <button class="btn-answer">answer 3</button>
+            <button class="btn-answer">answer 4</button>
+          </div>
         </section>
       </section>
-
-      <!--section index end -->
-
-      <!--section bookmark start-->
 
       <section data-js="section-bookmark" class="hidden">
-        <section data-js="card" class="card margin-t30">
-          <h2>Question 1</h2>
-          <i role="button" class="bookmark fa fa-bookmark"></i>
-
-          <h3>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, quia.
-          </h3>
-
-          <button data-js="buttonAnswer">show answer</button>
-          <p data-js="hiddenAnswer" class="hidden">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores,
-            iure!
-          </p>
-
-          <button class="btn-answer">answer 1</button>
-          <button class="btn-answer">answer 2</button>
-          <button class="btn-answer">answer 3</button>
-          <button class="btn-answer">answer 4</button>
-        </section>
-
         <section data-js="card" class="card">
           <h2>Question 2</h2>
           <i role="button" class="bookmark fa fa-bookmark"></i>
@@ -142,37 +138,23 @@
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, quia.
           </h3>
 
-          <button data-js="buttonAnswer">show answer</button>
-          <p data-js="hiddenAnswer" class="hidden">
+          <button class="btn-showAnswer" data-js="buttonAnswer">
+            show answer
+          </button>
+          <p data-js="hiddenAnswer" class="paragraph hidden">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores,
             iure!
           </p>
-
-          <button class="btn-answer">answer 1</button>
-          <button class="btn-answer">answer 2</button>
-          <button class="btn-answer">answer 3</button>
-          <button class="btn-answer">answer 4</button>
+          <div class="btn-grid">
+            <button class="btn-answer">answer 1</button>
+            <button class="btn-answer">answer 2</button>
+          </div>
+          <div class="btn-grid">
+            <button class="btn-answer">answer 3</button>
+            <button class="btn-answer">answer 4</button>
+          </div>
         </section>
 
-        <section data-js="card" class="card">
-          <h2>Question 3</h2>
-          <i role="button" class="bookmark fa fa-bookmark"></i>
-
-          <h3>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, quia.
-          </h3>
-
-          <button data-js="buttonAnswer">show answer</button>
-          <p data-js="hiddenAnswer" class="hidden">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores,
-            iure!
-          </p>
-
-          <button class="btn-answer">answer 1</button>
-          <button class="btn-answer">answer 2</button>
-          <button class="btn-answer">answer 3</button>
-          <button class="btn-answer">answer 4</button>
-        </section>
         <section data-js="card" class="card">
           <h2>Question 4</h2>
           <i role="button" class="bookmark fa fa-bookmark"></i>
@@ -181,22 +163,23 @@
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, quia.
           </h3>
 
-          <button data-js="buttonAnswer">show answer</button>
-          <p data-js="hiddenAnswer" class="hidden">
+          <button class="btn-showAnswer" data-js="buttonAnswer">
+            show answer
+          </button>
+          <p data-js="hiddenAnswer" class="paragraph hidden">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores,
             iure!
           </p>
-
-          <button class="btn-answer">answer 1</button>
-          <button class="btn-answer">answer 2</button>
-          <button class="btn-answer">answer 3</button>
-          <button class="btn-answer">answer 4</button>
+          <div class="btn-grid">
+            <button class="btn-answer">answer 1</button>
+            <button class="btn-answer">answer 2</button>
+          </div>
+          <div class="btn-grid">
+            <button class="btn-answer">answer 3</button>
+            <button class="btn-answer">answer 4</button>
+          </div>
         </section>
       </section>
-
-      <!--section bookmark end-->
-
-      <!--section form start-->
 
       <section data-js="section-create" class="app-grid_main hidden">
         <form data-js="form" class="form-grid card">
@@ -267,8 +250,9 @@
           </div>
         </form>
       </section>
+
       <section data-js="section-settings" class="app-grid_main hidden">
-        <button>Dark-Mode</button>
+        <button data-js="darkmode" class="card darkmode">Dark-Mode</button>
       </section>
     </main>
 
