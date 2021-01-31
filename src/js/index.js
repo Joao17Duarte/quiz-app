@@ -6,7 +6,8 @@ const home = getElement('section-home'),
   navBook = getElement('btnBook'),
   navCreate = getElement('btnCreate'),
   navSetting = getElement('btnSettings'),
-  header = document.querySelector('h1'),
+  title = document.querySelector('h1'),
+  body = document.querySelector('[data-js="body"]'),
   bookmarkIcons = document.querySelectorAll('[data-js="bookmarkIcon"]'),
   formEl = getElement('form'),
   labels = document.querySelectorAll('[data-js="labelForm"]'),
@@ -14,9 +15,10 @@ const home = getElement('section-home'),
   formInput = getElement('formInput'),
   darkmodeButton = getElement('darkmode'),
   buttons = document.querySelectorAll('.btn-showAnswer'),
-  answerButtons = document.querySelectorAll('.btn-answer')
-
-console.log(buttons)
+  answerButtons = document.querySelectorAll('.btn-answer'),
+  cards = document.querySelectorAll('[data-js="card"]'),
+  navBar = document.querySelector('.navigation'),
+  navButtons = document.querySelectorAll('.fas')
 
 navHome.addEventListener('click', () => {
   home.classList.remove('hidden')
@@ -24,7 +26,7 @@ navHome.addEventListener('click', () => {
   form.classList.add('hidden')
   settings.classList.add('hidden')
 
-  header.textContent = 'QuizGenerator'
+  title.textContent = 'QuizGenerator'
 
   navHome.classList.add('active')
   navBook.classList.remove('active')
@@ -37,7 +39,7 @@ navBook.addEventListener('click', () => {
   bookmark.classList.remove('hidden')
   form.classList.add('hidden')
   settings.classList.add('hidden')
-  header.textContent = 'Bookmark'
+  title.textContent = 'Bookmark'
 
   navHome.classList.remove('active')
   navBook.classList.add('active')
@@ -50,7 +52,7 @@ navCreate.addEventListener('click', () => {
   bookmark.classList.add('hidden')
   form.classList.remove('hidden')
   settings.classList.add('hidden')
-  header.textContent = 'Create your Question'
+  title.textContent = 'Create your Question'
 
   navHome.classList.remove('active')
   navBook.classList.remove('active')
@@ -63,7 +65,7 @@ navSetting.addEventListener('click', () => {
   bookmark.classList.add('hidden')
   form.classList.add('hidden')
   settings.classList.remove('hidden')
-  header.textContent = 'Settings'
+  title.textContent = 'Settings'
 
   navHome.classList.remove('active')
   navBook.classList.remove('active')
@@ -91,12 +93,6 @@ labels.forEach(label => {
   })
 })
 
-function getElement(dataJsName) {
-  return document.querySelector(`[data-js="${dataJsName}"]`)
-}
-
-const cards = document.querySelectorAll('[data-js="card"]')
-
 cards.forEach(card => {
   const buttonAnswer = card.querySelector('[data-js="buttonAnswer"]')
   const answer = card.querySelector('[data-js="hiddenAnswer"]')
@@ -106,8 +102,18 @@ cards.forEach(card => {
 })
 
 darkmodeButton.addEventListener('click', () => {
-  buttons.forEach(button => button.classList.toggle('btn-darkmode'))
+  buttons.forEach(button => button.classList.toggle('darkmode'))
   answerButtons.forEach(answerButton =>
-    answerButton.classList.toggle('btn-darkmode')
+    answerButton.classList.toggle('darkmode')
   )
+  cards.forEach(card => card.classList.toggle('darkmode'))
+  bookmarkIcons.forEach(icon => icon.classList.toggle('darkmode'))
+  navButtons.forEach(icon => icon.classList.toggle('lightdarkmode'))
+  navBar.classList.toggle('lightdarkmode')
+  title.classList.toggle('darkmode')
+  body.classList.toggle('lightdarkmode')
 })
+
+function getElement(dataJsName) {
+  return document.querySelector(`[data-js="${dataJsName}"]`)
+}
