@@ -1,24 +1,32 @@
+//section html section
 const home = getElement('section-home'),
   bookmark = getElement('section-bookmark'),
   form = getElement('section-create'),
   settings = getElement('section-settings'),
+  body = document.querySelector('[data-js="body"]'),
+  title = document.querySelector('h1'),
+  header = document.querySelector('header'),
+  //section navbar buttons
   navHome = getElement('btnHome'),
   navBook = getElement('btnBook'),
   navCreate = getElement('btnCreate'),
   navSetting = getElement('btnSettings'),
-  title = document.querySelector('h1'),
-  body = document.querySelector('[data-js="body"]'),
-  bookmarkIcons = document.querySelectorAll('[data-js="bookmarkIcon"]'),
+  navBar = document.querySelector('.navigation'),
+  navButtons = document.querySelectorAll('.fas'),
+  //section form
   formEl = getElement('form'),
+  formInput = getElement('formInput'),
   labels = document.querySelectorAll('[data-js="labelForm"]'),
   counters = document.querySelectorAll('[data-js="counter"]'),
-  formInput = getElement('formInput'),
-  darkmodeButton = getElement('darkmode'),
+  buttonSubmit = document.querySelectorAll('.btn-form'),
+  //section cards
+  cards = document.querySelectorAll('[data-js="card"]'),
   buttons = document.querySelectorAll('.btn-showAnswer'),
   answerButtons = document.querySelectorAll('.btn-answer'),
-  cards = document.querySelectorAll('[data-js="card"]'),
-  navBar = document.querySelector('.navigation'),
-  navButtons = document.querySelectorAll('.fas')
+  bookmarkIcons = document.querySelectorAll('[data-js="bookmarkIcon"]'),
+  checkedBookmark = document.querySelectorAll('.bookmark'),
+  //section darkmode
+  darkmodeButton = getElement('darkmode')
 
 navHome.addEventListener('click', () => {
   home.classList.remove('hidden')
@@ -73,10 +81,12 @@ navSetting.addEventListener('click', () => {
   navSetting.classList.add('active')
 })
 
-formEl.addEventListener('submit', event => {
-  event.preventDefault()
-  formEl.reset()
-  formInput.focus()
+cards.forEach(card => {
+  const buttonAnswer = card.querySelector('[data-js="buttonAnswer"]')
+  const answer = card.querySelector('[data-js="hiddenAnswer"]')
+  buttonAnswer.addEventListener('click', () => {
+    answer.classList.toggle('hidden')
+  })
 })
 
 bookmarkIcons.forEach(icon => {
@@ -85,19 +95,17 @@ bookmarkIcons.forEach(icon => {
   })
 })
 
+formEl.addEventListener('submit', event => {
+  event.preventDefault()
+  formEl.reset()
+  formInput.focus()
+})
+
 labels.forEach(label => {
   const inputBox = label.querySelector('[data-js="formInput"]')
   const counter = label.querySelector('[data-js="counter"]')
   inputBox.addEventListener('input', event => {
     counter.textContent = `${event.currentTarget.value.length}/100`
-  })
-})
-
-cards.forEach(card => {
-  const buttonAnswer = card.querySelector('[data-js="buttonAnswer"]')
-  const answer = card.querySelector('[data-js="hiddenAnswer"]')
-  buttonAnswer.addEventListener('click', () => {
-    answer.classList.toggle('hidden')
   })
 })
 
@@ -110,8 +118,13 @@ darkmodeButton.addEventListener('click', () => {
   bookmarkIcons.forEach(icon => icon.classList.toggle('darkmode'))
   navButtons.forEach(icon => icon.classList.toggle('lightdarkmode'))
   navBar.classList.toggle('lightdarkmode')
-  title.classList.toggle('darkmode')
+  header.classList.toggle('darkmode')
   body.classList.toggle('lightdarkmode')
+  formEl.classList.toggle('darkmode')
+  buttonSubmit.forEach(btn => btn.classList.toggle('lightdarkmode'))
+  checkedBookmark.forEach(checkedIcon =>
+    checkedIcon.classList.toggle('lightdarkmode')
+  )
 })
 
 function getElement(dataJsName) {

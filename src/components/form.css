@@ -29,3 +29,9 @@
   opacity: 0.5;
   font-size: 12px;
 }
+
+.lightdarkmode {
+  border-color: #505050;
+  background: #505050;
+  color: #eee;
+}
