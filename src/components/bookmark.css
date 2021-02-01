@@ -7,15 +7,3 @@
   background: #abdae1;
   overflow: hidden;
 }
-
-.darkmode {
-  border-color: #444;
-  background: #303030;
-  color: #fff;
-}
-
-.lightdarkmode {
-  border-color: #505050;
-  background: #505050;
-  color: #eee;
-}
